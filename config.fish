@@ -5,6 +5,11 @@
 # basic aliases
 alias cls='clear'
 
+# aliases to places
+alias wonz='cd /mnt/c/Users/cp/Documents/Coding/Python'
+alias codd='cd /mnt/c/Users/cp/Documents/Coding/'
+alias stud='cd /mnt/c/Users/cp/Dysk\ Google/!STUDIA'
+alias home='cd /mnt/c/Users/cp'
 
 # aliases for software wsl
 alias clip='clip.exe'
@@ -15,11 +20,13 @@ alias chrome='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.ex
 alias vim='nvim'
 alias links='links2'
 alias ran='ranger'
+alias ww='wslview' # open via default windows app
 
 # aliases for git commands
 alias sts='git status'
 alias gpp='git push'
 alias glg='git log --graph'
+alias glo='git log --oneline'
 alias ginit='git init'
 alias gad='git add .'
 alias commit='git commit'
@@ -43,9 +50,14 @@ alias sfi='source ~/.config/fish/config.fish'
 # fish prompt
 function fish_prompt
     set_color $fish_color_cwd
-    echo -n (prompt_pwd)
+    echo -n (pwd)
     set_color normal
     echo -n ' ~> '
+end
+
+# fish message
+function fish_greeting
+
 end
 
 # add browser global variable to use chrome
@@ -58,4 +70,8 @@ export VISUAL=nvim;
 # ls coloring
 eval (dircolors -c ~/.dircolors)
 
+# functions
 
+function newtex
+    cp -r ~/.bash_scripts/files/tex $PWD
+end
