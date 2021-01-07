@@ -10,6 +10,7 @@ alias wonz='cd /mnt/c/Users/cp/Documents/Coding/Python'
 alias codd='cd /mnt/c/Users/cp/Documents/Coding/'
 alias stud='cd /mnt/c/Users/cp/Dysk\ Google/!STUDIA'
 alias home='cd /mnt/c/Users/cp'
+alias dotfiles='cd ~/.config/dotfiles'
 
 # aliases for software wsl
 alias clip='clip.exe'
@@ -71,7 +72,6 @@ export VISUAL=nvim;
 eval (dircolors -c ~/.dircolors)
 
 # functions
-
 function newtex
-    cp -r ~/.bash_scripts/files/tex $PWD
+    cp -r ~/.config/dotfiles/files/tex $PWD
 end

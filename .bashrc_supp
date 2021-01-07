@@ -7,13 +7,13 @@
 pwonz='/mnt/c/Users/cp/Documents/Coding/Python'
 pcodi='/mnt/c/Users/cp/Documents/Coding/'
 pdox='/mnt/c/Users/cp/Documents/'
-pstud='/mnt/c/Users/cp/Dysk\ Google/!STUDIA/'
+pstud=/mnt/c/Users/cp/Dysk\ Google/!STUDIA/
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
 alias codi='cd $pcodi'
 alias dox='cd $pdox'
-alias stud='cd $pstud'
+alias stud='cd /mnt/c/Users/cp/Dysk\ Google/\!STUDIA/'
 alias lindoc='cd ~/docs'
 alias sscripts='cd ~/.bash_scripts'
 alias config='cd ~/.config'
@@ -43,6 +43,10 @@ alias docs_backup='sh ~/.bash_scripts/archive_gdrive_docs_github.sh'
 # aliases for often visited files
 alias vibrc='vim ~/.bash_scripts/.bashrc_supp'
 alias nviminit='vim ~/.config/nvim/init.vim'
+alias vimux='vim ~/.tmux.conf'
+
+# aliases for sourcing
+alias sbrc="source ~/.bashrc"
 
 # add browser global variable to use chrome
 export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
