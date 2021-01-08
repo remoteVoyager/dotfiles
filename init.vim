@@ -1,6 +1,7 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ncm2/ncm2'
+" language server
 Plug 'prabirshrestha/vim-lsp'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
@@ -163,9 +164,7 @@ nnoremap L $
 " abbreviations
 :iabbrev adn and
 :iabbrev lenght length
-:iabbrev jebać jebać pis 
 :iabbrev @@ mlukaszewicz2@gmail.com
-" :iabbrev @gh www.github.com//remoteVoyager
 
 " mapping for viminit editing
 nnoremap <leader>ev :vsp $MYVIMRC<cr> gg/let mapleader<cr>}
@@ -173,7 +172,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " graphics
 set background=dark
-
 colorscheme afterglow 
 
 let g:lightline = { 'colorscheme': 'palenigth'}
@@ -332,6 +330,16 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 
+" unicode for polish characters
+" FIXME
+if has("multi_byte")
+    if &termencoding == """
+        let &termencoding = &encoding
+    endif
+    set encoding=utf-8
+    setglobal fileencoding=utf-8 bomb
+    set fileencodings=ucs-bom,utf-8,latin1
+endif
 
 
 " funny prompt (^w^)
