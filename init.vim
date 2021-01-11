@@ -158,8 +158,8 @@ vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>`>l
 " H and L to move to begining and end of line
 nnoremap H 0
 nnoremap L $
-" vim-which key map
-
+" visual block remap
+nnoremap <leader>vb <c-v>
 
 " abbreviations
 :iabbrev adn and

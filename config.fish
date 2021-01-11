@@ -11,6 +11,7 @@ alias codd='cd /mnt/c/Users/cp/Documents/Coding/'
 alias stud='cd /mnt/c/Users/cp/Dysk\ Google/!STUDIA'
 alias home='cd /mnt/c/Users/cp'
 alias dotfiles='cd ~/.config/dotfiles'
+alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
 
 # aliases for software wsl
 alias clip='clip.exe'
@@ -36,6 +37,10 @@ alias commit='git commit'
 alias sbin='source ./venv/bin/activate'
 alias deac='deactivate'
 alias cvenv='python -m venv venv'
+
+# emacs utility aliases
+alias dsync='~/.emacs.d/bin/doom sync'
+alias viema='vim ~/.doom.d/config.el'
 
 # aliases for shell scripts
 alias docs_backup='sh ~/.bash_scripts/archive_gdrive_docs_github.sh'
@@ -75,3 +80,12 @@ eval (dircolors -c ~/.dircolors)
 function newtex
     cp -r ~/.config/dotfiles/files/tex $PWD
 end
+
+# xserver
+# uncomment for xserver windows use
+# export DISPLAY=(ip route | awk '{print $3; exit}'):0
+# export LIBGL_ALWAYS_INDIRECT=1
+# export GDK_SCALE=1
+#
+# emacs remap for non-gui use
+alias emacs='emacs -nw'
