@@ -26,6 +26,7 @@ alias links='links2'
 alias ran='ranger'
 alias ww='wslview' # open via default windows app
 alias gist='gh gist'
+alias ccat='pygmentize -g -O style=colorful,lineos=1'
 
 # aliases for git commands
 alias sts='git status'
@@ -52,6 +53,7 @@ alias docs_backup='sh ~/.bash_scripts/archive_gdrive_docs_github.sh'
 alias vibrc='vim ~/.bash_scripts/.bashrc_supp'
 alias vifi='vim ~/.config/fish/config.fish'
 alias nviminit='vim ~/.config/nvim/init.vim'
+alias vitmux='vim ~/.tmux.conf'
 
 # source fish shell config
 alias sfi='source ~/.config/fish/config.fish'

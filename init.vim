@@ -4,6 +4,7 @@ Plug 'ncm2/ncm2'
 
 " language server
 Plug 'prabirshrestha/vim-lsp'
+Plug 'jackguo380/vim-lsp-cxx-highlight'
 
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'scrooloose/nerdtree'
@@ -98,11 +99,11 @@ set cindent
 set tabstop=4
 set shiftwidth=4
 " always uses spaces instead of tab characters
-set expandtab
+" set expandtab
 
 " commonly changed
 set cc=80
-set number
+set number 
 
 " maps to ignore arrow keys
 noremap  <Up>     <NOP>
@@ -188,7 +189,6 @@ let g:lightline = { 'colorscheme': 'palenigth'}
 let g:airline_theme = "afterglow"
 
 " turn on hybrid line numbers
-set number relativenumber
 set spelllang=en
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
