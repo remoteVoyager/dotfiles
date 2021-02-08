@@ -1,3 +1,7 @@
 [user]
 	email = mlukaszewicz2@gmail.com
 	name = remoteVoyager
+[github]
+	user = remoteVoyager
+[core]
+	editor = vi

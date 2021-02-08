@@ -12,6 +12,8 @@ alias stud='cd /mnt/c/Users/cp/Dysk\ Google/!STUDIA'
 alias home='cd /mnt/c/Users/cp'
 alias dotfiles='cd ~/.config/dotfiles'
 alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
+alias down='cd /mnt/c/Users/cp/Downloads'
+alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
 
 # aliases for software wsl
 alias clip='clip.exe'
@@ -23,6 +25,7 @@ alias vim='nvim'
 alias links='links2'
 alias ran='ranger'
 alias ww='wslview' # open via default windows app
+alias gist='gh gist'
 
 # aliases for git commands
 alias sts='git status'
@@ -34,9 +37,9 @@ alias gad='git add .'
 alias commit='git commit'
 
 # python utility commands and functions
-alias sbin='source ./venv/bin/activate'
-alias deac='deactivate'
-alias cvenv='python -m venv venv'
+alias venva='. ./.env/bin/activate.fish'
+alias venvd='deactivate'
+alias venvc='python -m venv .env'
 
 # emacs utility aliases
 alias dsync='~/.emacs.d/bin/doom sync'
