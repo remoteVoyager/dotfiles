@@ -163,7 +163,7 @@ vnoremap <leader>' <esc>`>a'<esc>`<i'<esc>`>l
 nnoremap H 0
 nnoremap L $
 " visual block remap
-nnoremap <leader>vb <c-v>
+nnoremap <leader>b <c-v>
 " quick write exit
 nnoremap <leader>wq :wq<cr>
 " quick non-write exit

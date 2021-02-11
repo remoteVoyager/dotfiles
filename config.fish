@@ -71,9 +71,6 @@ function fish_greeting
 
 end
 
-# add browser global variable to use chrome
-export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
-
 # my variables
 export EDITOR=nvim;
 export VISUAL=nvim;
