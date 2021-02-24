@@ -4,4 +4,4 @@
 [github]
 	user = remoteVoyager
 [core]
-	editor = vi
+	editor = nvim

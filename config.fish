@@ -37,6 +37,10 @@ alias ginit='git init'
 alias gad='git add .'
 alias commit='git commit'
 
+# clasp aliases
+alias clapp='clasp push'
+alias clapu='clasp pull'
+
 # python utility commands and functions
 alias venva='. ./.env/bin/activate.fish'
 alias venvd='deactivate'
