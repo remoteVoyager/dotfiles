@@ -36,7 +36,8 @@ alias glo='git log --oneline'
 alias ginit='git init'
 alias gad='git add .'
 alias commit='git commit'
-
+alias gdif='git diff'
+#
 # clasp aliases
 alias clapp='clasp push'
 alias clapu='clasp pull'

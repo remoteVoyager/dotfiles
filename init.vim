@@ -16,6 +16,7 @@ Plug 'airblade/vim-gitgutter'
 Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
+Plug 'easymotion/vim-easymotion'
 
 " language support
 " markdown
@@ -135,7 +136,7 @@ cmap <S-Insert>     <C-R>+
 " map for : without shift (swithced places with ;)
 " nnoremap ; :
 " nnoremap : ;
-
+ 
 " useful maps, magic is here
 let mapleader = ','
 " from exiting the insert mode
@@ -168,6 +169,13 @@ nnoremap <leader>b <c-v>
 nnoremap <leader>wq :wq<cr>
 " quick non-write exit
 nnoremap <leader>qq :q<cr>
+" easymotion
+nmap s <Plug>(easymotion-s)
+let g:EasyMotion_smartcase = 1
+" easymotion JK
+"map <Leader>j <Plug>(easymotion-j)
+"map <Leader>k <Plug>(easymotion-k)
+ 
 
 " abbreviations
 :iabbrev adn and
@@ -188,7 +196,6 @@ colorscheme afterglow
 let g:lightline = { 'colorscheme': 'palenigth'}
 let g:airline_theme = "afterglow"
 
-" turn on hybrid line numbers
 set spelllang=en
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
