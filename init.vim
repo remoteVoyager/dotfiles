@@ -130,8 +130,8 @@ vnoremap <C-Insert> "+y
 map <C-V>       "+gP
 map <S-Insert>      "+gP
 
-cmap <C-V>      <C-R>+
-cmap <S-Insert>     <C-R>+  
+cmap <C-V>      +
+cmap <S-Insert>     +  
 
 " map for : without shift (swithced places with ;)
 " nnoremap ; :
