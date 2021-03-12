@@ -18,6 +18,9 @@ alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
 alias down='cd /mnt/c/Users/cp/Downloads'
 alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
 
+# aliases for comands
+alias cls='clear'
+
 # aliases for software wsl
 alias clip='clip.exe'
 alias py='python3'
@@ -65,10 +68,12 @@ alias vibrc='vim ~/.bash_scripts/.bashrc_supp'
 alias vifi='vim ~/.config/fish/config.fish'
 alias nviminit='vim ~/.config/nvim/init.vim'
 alias vitmux='vim ~/.tmux.conf'
+alias vzsh='vim ~/.zshrc'
 
 # aliases for sourcing
 alias sbrc="source ~/.bashrc"
 alias sfi='source ~/.config/fish/config.fish'
+alias szs='source ~/.zshrc'
 
 # add browser global variable to use chrome
 export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
