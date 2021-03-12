@@ -26,7 +26,7 @@ alias links='links2'
 alias ran='ranger'
 alias ww='wslview' # open via default windows app
 alias gist='gh gist'
-alias ccat='pygmentize -g -O style=colorful,lineos=1'
+alias cat='pygmentize -g -O style=colorful,lineos=1'
 
 # aliases for git commands
 alias sts='git status'
@@ -37,7 +37,9 @@ alias ginit='git init'
 alias gad='git add .'
 alias commit='git commit'
 alias gdif='git diff'
-#
+alias gbb='git checkout -b'
+alias gpl='git pull'
+
 # clasp aliases
 alias clapp='clasp push'
 alias clapu='clasp pull'

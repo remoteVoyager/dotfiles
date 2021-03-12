@@ -94,7 +94,7 @@ alias l='ls -CF'
 alias cls='clear'
 
 # my bashrc supplement file, for cleaner aliases
-source ~/.config/dotfiles/.bashrc_supp
+source ~/.bashrc_supp
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert

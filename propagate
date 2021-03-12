@@ -1,0 +1,42 @@
+#!/bin/bash
+
+# software install ubuntu WSL
+sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
+sudo apt-add-repository https://cli.github.com/packages
+
+sudo apt update
+
+sudo apt install nvim ranger fish gh mc
+
+# configuration files 
+# vim
+if [ ! -d "~/.config/nvim"]; then
+	mkdir -p ~/.config/nvim
+else
+	rm ~/.config/nvim/init.vim ~/.config/nvim/vimscripts
+fi
+ln -s ~/.config/dotfiles/init.vim ~/.config/nvim/init.vim
+ln -s ~/.config/dotfiles/vimscripts ~/.config/nvim/vimscripts
+nvim +PlugInstall
+
+# fish
+rm ~/.config/fish/config.fish
+ln -s ~/.config/dotfiles/config.fish ~/.config/fish/config.fish
+
+# bashrc 
+rm ~/.bashrc ~/.bashrc_supp
+ln -s ~/.config/dotfiles/.bashrc ~/.bashrc
+ln -s ~/.config/dotfiles/.bashrc_supp ~/.bashrc_supp
+
+# tmux
+rm ~/.tmux.conf
+ln -s ~/.config/dotfiles/.tmux.conf ~/.tmux.conf
+
+# git
+rm ~/.gitconfig
+ln -s ~/.config/dotfiles/.gitconfig ~/.gitconfig
+
+# dircolors
+rm ~/.dircolors
+ln -s ~/.config/dotfiles/.dircolors ~/.dircolors
+
