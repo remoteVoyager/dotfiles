@@ -24,9 +24,9 @@ rm ~/.config/fish/config.fish
 ln -s ~/.config/dotfiles/config.fish ~/.config/fish/config.fish
 
 # bashrc 
-rm ~/.bashrc ~/.bashrc_supp
+rm ~/.bashrc ~/.bash_profile
 ln -s ~/.config/dotfiles/.bashrc ~/.bashrc
-ln -s ~/.config/dotfiles/.bashrc_supp ~/.bashrc_supp
+ln -s ~/.config/dotfiles/.bash_profile ~/.bash_profile
 
 # tmux
 rm ~/.tmux.conf
