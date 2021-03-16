@@ -1,0 +1,11 @@
+#!/bin/sh
+
+if [ -f mergedmd.md ]; then
+	rm mergedmd.md
+fi
+
+for file in "$PWD"/*.md
+do
+	echo "\n\n\_$file\_\n" >> mergedmd.md
+	cat $file >> mergedmd.md
+done
