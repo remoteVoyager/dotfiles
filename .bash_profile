@@ -17,6 +17,7 @@ alias dotfiles='cd ~/.config/dotfiles'
 alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
 alias down='cd /mnt/c/Users/cp/Downloads'
 alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
+alias wtools='cd /mnt/c/Users/cp/!Tools'
 
 # aliases for comands
 alias cls='clear'
@@ -64,7 +65,7 @@ alias viema='vim ~/.doom.d/config.el'
 alias docs_backup='sh ~/.bash_scripts/archive_gdrive_docs_github.sh'
 
 # aliases for often visited files
-alias vibrc='vim ~/.bash_scripts/.bashrc_supp'
+alias vibrc='vim ~/.bash_profile'
 alias vifi='vim ~/.config/fish/config.fish'
 alias nviminit='vim ~/.config/nvim/init.vim'
 alias vitmux='vim ~/.tmux.conf'
@@ -80,7 +81,6 @@ export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.
 
 # my variables
 export EDITOR=nvim;
-export VISUAL=nvim;
 
 # python utility commands and functions
 alias sbin='source ./venv/bin/activate'

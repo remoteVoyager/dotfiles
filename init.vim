@@ -13,7 +13,8 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
 Plug 'ryanoasis/vim-devicons'
 Plug 'airblade/vim-gitgutter'
-Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+"Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'scrooloose/nerdcommenter'
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
 Plug 'easymotion/vim-easymotion'
@@ -96,11 +97,9 @@ noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
 set smarttab
-set cindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
-" always uses spaces instead of tab characters
-" set expandtab
 
 " commonly changed
 set cc=80
@@ -176,6 +175,11 @@ let g:EasyMotion_smartcase = 1
 "map <Leader>j <Plug>(easymotion-j)
 "map <Leader>k <Plug>(easymotion-k)
  
+" FZF commands
+" search files
+nnoremap <silent> <space>f :FZF<CR>
+" search in files
+nnoremap <silent> <space>F :FZF ~<CR>
 
 " abbreviations
 :iabbrev adn and
