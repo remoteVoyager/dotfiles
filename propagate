@@ -6,7 +6,7 @@ sudo apt-add-repository https://cli.github.com/packages
 
 sudo apt update
 
-sudo apt install nvim ranger fish gh mc
+sudo apt install neovim ranger gh mc zsh tmux
 
 # configuration files 
 # vim
@@ -17,11 +17,7 @@ else
 fi
 ln -s ~/.config/dotfiles/init.vim ~/.config/nvim/init.vim
 ln -s ~/.config/dotfiles/vimscripts ~/.config/nvim/vimscripts
-nvim +PlugInstall
-
-# fish
-rm ~/.config/fish/config.fish
-ln -s ~/.config/dotfiles/config.fish ~/.config/fish/config.fish
+neovim +PlugInstall
 
 # bashrc 
 rm ~/.bashrc ~/.bash_profile
@@ -31,6 +27,11 @@ ln -s ~/.config/dotfiles/.bash_profile ~/.bash_profile
 # tmux
 rm ~/.tmux.conf
 ln -s ~/.config/dotfiles/.tmux.conf ~/.tmux.conf
+
+# zsh
+rm ~/.zshrc
+ln -s ~/.config/dotfiles/.zshrc ~/.zshrc
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
 # git
 rm ~/.gitconfig
