@@ -195,7 +195,7 @@ nnoremap <leader>md :MarkDrawer<cr>
 
 " graphics
 set background=dark
-colorscheme afterglow 
+colorscheme gruvbox 
 
 let g:lightline = { 'colorscheme': 'palenigth'}
 let g:airline_theme = "afterglow"
