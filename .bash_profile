@@ -4,20 +4,25 @@
 
 
 # variables for specific places
-pwonz='/mnt/c/Users/cp/Documents/Coding/Python'
-pcodi='/mnt/c/Users/cp/Documents/Coding/'
-pdox='/mnt/c/Users/cp/Documents/'
+phome='/mnt/c/Users/cp'
+pdox="$phome/Documents/"
+pcode="$pdox/Coding/"
+pwonz="$pcode/Python/"
+pdotfiles="~/.config/dotfiles"
+pstud="$phome/Dysk Google/!STUDIA"
+pacad="$pstud/pyacademic/"
 
 # aliases for getting into specific places
-alias wonz='cd /mnt/c/Users/cp/Documents/Coding/Python'
-alias codd='cd /mnt/c/Users/cp/Documents/Coding/'
-alias stud='cd /mnt/c/Users/cp/Dysk\ Google/!STUDIA'
-alias home='cd /mnt/c/Users/cp'
-alias dotfiles='cd ~/.config/dotfiles'
+alias wonz='cd $pwonz'
+alias codd='cd $pcodi'
+alias stud='cd $pstud'
+alias home='cd $phome'
+alias dotfiles='cd $pdotfiles'
 alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
 alias down='cd /mnt/c/Users/cp/Downloads'
 alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
 alias wtools='cd /mnt/c/Users/cp/!Tools'
+alias acad='cd $pacad'
 
 # aliases for comands
 alias cls='clear'
@@ -86,3 +91,7 @@ export EDITOR=nvim;
 alias sbin='source ./venv/bin/activate'
 alias deac='deactivate'
 alias cvenv='python -m venv venv'
+
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! ["$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+	  exec tmux
+fi

@@ -132,6 +132,9 @@ map <S-Insert>      "+gP
 cmap <C-V>      +
 cmap <S-Insert>     +  
 
+" ctrl s save
+nnoremap <C-s> :w<CR>
+
 " map for : without shift (swithced places with ;)
 " nnoremap ; :
 " nnoremap : ;
@@ -197,8 +200,8 @@ nnoremap <leader>md :MarkDrawer<cr>
 set background=dark
 colorscheme gruvbox 
 
-let g:lightline = { 'colorscheme': 'palenigth'}
-let g:airline_theme = "afterglow"
+"let g:lightline = { 'colorscheme': 'palenigth'}
+"let g:airline_theme = "afterglow"
 
 set spelllang=en
 nnoremap <silent> <F11> :set spell!<cr>

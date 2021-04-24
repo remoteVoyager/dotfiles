@@ -5,3 +5,5 @@
 	user = m-luk
 [core]
 	editor = nvim
+[init]
+	defaultBranch = main
