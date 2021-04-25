@@ -4,11 +4,12 @@
 
 
 # variables for specific places
-phome='/mnt/c/Users/cp'
+phome="/mnt/c/Users/cp"
+plinhome="/home/mluk"
 pdox="$phome/Documents/"
 pcode="$pdox/Coding/"
 pwonz="$pcode/Python/"
-pdotfiles="~/.config/dotfiles"
+pdotfiles="$plinhome/.config/dotfiles/"
 pstud="$phome/Dysk Google/!STUDIA"
 pacad="$pstud/pyacademic/"
 
