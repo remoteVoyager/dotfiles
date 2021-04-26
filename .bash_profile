@@ -6,12 +6,12 @@
 # variables for specific places
 phome="/mnt/c/Users/cp"
 plinhome="/home/mluk"
-pdox="$phome/Documents/"
-pcode="$pdox/Coding/"
-pwonz="$pcode/Python/"
-pdotfiles="$plinhome/.config/dotfiles/"
+pdox="$phome/Documents"
+pcode="$pdox/Coding"
+pwonz="$pcode/Python"
+pdotfiles="$plinhome/.config/dotfiles"
 pstud="$phome/Dysk Google/!STUDIA"
-pacad="$pstud/pyacademic/"
+pacad="$pstud/pyacademic"
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
