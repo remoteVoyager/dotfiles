@@ -1,25 +1,26 @@
 call plug#begin('~/.config/nvim/plugged')
 
 Plug 'ncm2/ncm2'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'ryanoasis/vim-devicons'
+Plug 'easymotion/vim-easymotion'
+"
+" file management
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
+Plug 'airblade/vim-gitgutter'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'scrooloose/nerdcommenter'
 
 " language server
 Plug 'prabirshrestha/vim-lsp'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
+Plug 'neoclide/coc-css'
 
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'scrooloose/nerdtree'
-"Plug 'tsony-tsonev/nerdtree-git-plugin'
-Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'ryanoasis/vim-devicons'
-Plug 'airblade/vim-gitgutter'
-"Plug 'ctrlpvim/ctrlp.vim' " fuzzy find files
-Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'scrooloose/nerdcommenter'
+" linters/formatters
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
-Plug 'easymotion/vim-easymotion'
 
-" language support
 " markdown
 Plug 'Scuilion/markdown-drawer', {'for': 'markdown'}
 
@@ -178,6 +179,10 @@ let g:EasyMotion_smartcase = 1
 "map <Leader>j <Plug>(easymotion-j)
 "map <Leader>k <Plug>(easymotion-k)
  
+" tabs
+nnoremap <C-t> :tabe 
+nnoremap <space>t :tabn<CR>
+
 " FZF commands
 " search files
 nnoremap <silent> <space>f :FZF<CR>
