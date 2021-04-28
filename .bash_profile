@@ -12,6 +12,7 @@ pwonz="$pcode/Python"
 pdotfiles="$plinhome/.config/dotfiles"
 pstud="$phome/Dysk Google/!STUDIA"
 pacad="$pstud/pyacademic"
+pmluk="$pcodi/Web/mluk.pl"
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
@@ -24,6 +25,7 @@ alias down='cd /mnt/c/Users/cp/Downloads'
 alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
 alias wtools='cd /mnt/c/Users/cp/!Tools'
 alias acad='cd $pacad'
+alias mluk='cd $pmluk'
 
 # aliases for comands
 alias cls='clear'

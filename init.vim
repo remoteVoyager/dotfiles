@@ -4,14 +4,12 @@ Plug 'ncm2/ncm2'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'ryanoasis/vim-devicons'
 Plug 'easymotion/vim-easymotion'
-"
+
 " file management
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight'
-Plug 'airblade/vim-gitgutter'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
-Plug 'scrooloose/nerdcommenter'
 
 " language server
 Plug 'prabirshrestha/vim-lsp'
@@ -29,6 +27,8 @@ Plug 'mhinz/vim-startify'
 Plug 'tpope/vim-surround'
 Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
+Plug 'tpope/vim-commentary'
+Plug 'tpope/vim-fugitive'
 
 " themes
 Plug 'morhetz/gruvbox'
@@ -41,7 +41,6 @@ Plug 'vim-airline/vim-airline-themes'
 
 
 call plug#end()
-
 
 if (has("nvim"))
   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
@@ -97,12 +96,11 @@ let g:ctrlp_user_command = ['.git/', 'git --git-dir=%s/.git ls-files -oc --exclu
 noremap <silent> <expr> j (v:count == 0 ? 'gj' : 'j')
 noremap <silent> <expr> k (v:count == 0 ? 'gk' : 'k')
 
+" tabbing
 set smarttab
 set smartindent
 set tabstop=4
 set shiftwidth=4
-
-" commonly changed
 set cc=80
 set number 
 
@@ -116,37 +114,28 @@ noremap   <Down>   <NOP>
 noremap   <Left>   <NOP>
 noremap   <Right>  <NOP>
 
-
 " maps to set copy paste
 " CTRL-X and SHIFT-Del are Cut
 vnoremap <C-X> "+x
 vnoremap <S-Del> "+x
-
 " CTRL-C and CTRL-Insert are Copy
 vnoremap <C-C> "+y
 vnoremap <C-Insert> "+y
-
 " CTRL-V and SHIFT-Insert are Paste
 map <C-V>       "+gP
 map <S-Insert>      "+gP
-
 cmap <C-V>      +
 cmap <S-Insert>     +  
 
 " ctrl s save
 nnoremap <C-s> :w<CR>
-
-" map for : without shift (swithced places with ;)
-" nnoremap ; :
-" nnoremap : ;
  
 " useful maps, magic is here
 let mapleader = ','
-" from exiting the insert mode
-inoremap <leader>., <esc> 
+vnoremap <leader><leader> <esc> "jfrom exiting the insert mode
 inoremap jk <ESC>
 " delete line and back to insert
-inoremap <c-d> <esc>ddi
+inoremap <C-d> <esc>ddi
 " uppercase current word
 inoremap <c-u> <esc>bveUea<space>
 nnoremap <leader>c ddO
@@ -172,12 +161,11 @@ nnoremap <leader>b <c-v>
 nnoremap <leader>wq :wq<cr>
 " quick non-write exit
 nnoremap <leader>qq :q<cr>
+"
 " easymotion
 nmap s <Plug>(easymotion-s)
 let g:EasyMotion_smartcase = 1
 " easymotion JK
-"map <Leader>j <Plug>(easymotion-j)
-"map <Leader>k <Plug>(easymotion-k)
  
 " tabs
 nnoremap <C-t> :tabe 
@@ -205,9 +193,11 @@ nnoremap <leader>md :MarkDrawer<cr>
 set background=dark
 colorscheme gruvbox 
 
+" airline
 "let g:lightline = { 'colorscheme': 'palenigth'}
 "let g:airline_theme = "afterglow"
 
+" Spellcheck
 set spelllang=en
 nnoremap <silent> <F11> :set spell!<cr>
 inoremap <silent> <F11> <C-O>:set spell!<cr>
@@ -351,18 +341,6 @@ nnoremap <silent> <space>j  :<C-u>CocNext<CR>
 nnoremap <silent> <space>k  :<C-u>CocPrev<CR>
 " Resume latest coc list
 nnoremap <silent> <space>p  :<C-u>CocListResume<CR>
-
-" unicode for polish characters
-" FIXME
-if has("multi_byte")
-    if &termencoding == """
-        let &termencoding = &encoding
-    endif
-    set encoding=utf-8
-    setglobal fileencoding=utf-8 bomb
-    set fileencodings=ucs-bom,utf-8,latin1
-endif
-
 
 " funny prompt (^w^)
 echo '(⁄˘⁄ ⁄ ω⁄ ⁄ ˘⁄) ~bbakaaaa senpaiii, if you open me like that i willlll....'
