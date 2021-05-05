@@ -161,7 +161,9 @@ nnoremap <leader>b <c-v>
 nnoremap <leader>wq :wq<cr>
 " quick non-write exit
 nnoremap <leader>qq :q<cr>
-"
+" quick write with leader
+nnoremap <leader>ww :w<cr>
+
 " easymotion
 nmap s <Plug>(easymotion-s)
 let g:EasyMotion_smartcase = 1
@@ -181,6 +183,7 @@ nnoremap <silent> <space>F :FZF ~<CR>
 :iabbrev adn and
 :iabbrev lenght length
 :iabbrev @@ mlukaszewicz2@gmail.com
+:iabbrev @@@ mluk@mluk.pl
 
 " mapping for viminit editing
 nnoremap <leader>ev :vsp $MYVIMRC<cr> gg/let mapleader<cr>}
@@ -192,10 +195,6 @@ nnoremap <leader>md :MarkDrawer<cr>
 " graphics
 set background=dark
 colorscheme gruvbox 
-
-" airline
-"let g:lightline = { 'colorscheme': 'palenigth'}
-"let g:airline_theme = "afterglow"
 
 " Spellcheck
 set spelllang=en
