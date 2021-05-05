@@ -7,12 +7,12 @@
 phome="/mnt/c/Users/cp/"
 plinhome="/home/mluk"
 pdox="$phome/Documents"
-pcodi="$pdox/Coding"
+pcode="$pdox/Coding"
 pwonz="$pcode/Python"
 pdotfiles="$plinhome/.config/dotfiles"
 pstud="$phome/Dysk Google/!STUDIA"
 pacad="$pstud/pyacademic"
-pmluk="$pcodi/Web/mluk.pl"
+pmluk="$pcode/Web/mluk.pl"
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
@@ -20,10 +20,10 @@ alias codd='cd $pcodi'
 alias stud='cd $pstud'
 alias home='cd $phome'
 alias dotfiles='cd $pdotfiles'
-alias stm='cd /mnt/c/Users/cp/Documents/Coding/uC/stm32'
-alias down='cd /mnt/c/Users/cp/Downloads'
-alias proto='cd /mnt/c/Users/cp/Proton_Dysk'
-alias wtools='cd /mnt/c/Users/cp/!Tools'
+alias stm='cd $pcode/uC/stm32'
+alias down='cd $phome/Downloads'
+alias proto='cd $phome/Proton_Dysk'
+alias wtools='cd $phome/!Tools'
 alias acad='cd $pacad'
 alias mluk='cd $pmluk'
 
