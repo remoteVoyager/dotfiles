@@ -60,17 +60,9 @@ alias gpl='git pull'
 alias clapp='clasp push'
 alias clapu='clasp pull'
 
-# python utility commands and functions
-alias venva='. ./.env/bin/activate.fish'
-alias venvd='deactivate'
-alias venvc='python -m venv .env'
-
 # emacs utility aliases
 alias dsync='~/.emacs.d/bin/doom sync'
 alias viema='vim ~/.doom.d/config.el'
-
-# aliases for shell scripts
-alias docs_backup='sh ~/.bash_scripts/archive_gdrive_docs_github.sh'
 
 # aliases for often visited files
 alias vibrc='vim ~/.bash_profile'
@@ -94,6 +86,22 @@ export EDITOR=nvim;
 alias sbin='source ./venv/bin/activate'
 alias deac='deactivate'
 alias cvenv='python -m venv venv'
+
+# exa aliases if exa present
+if command -v exa &> /dev/null
+then
+	# general use
+	alias ls='exa'                                                          # ls
+	alias l='exa -lbF --git'                                                # list, size, type, git
+	alias ll='exa -lbGF --git'                                             # long list
+	alias llm='exa -lbGd --git --sort=modified'                            # long list, modified date sort
+	alias la='exa -lbhHigUmuSa --time-style=long-iso --git --color-scale'  # all list
+	alias lx='exa -lbhHigUmuSa@ --time-style=long-iso --git --color-scale' # all + extended list
+
+	# specialty views
+	alias lS='exa -1'                                                              # one column, just names
+	alias lt='exa --tree --level=2'                                         # tree
+fi
 
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! ["$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	  exec tmux
