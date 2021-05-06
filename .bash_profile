@@ -16,7 +16,7 @@ pmluk="$pcode/Web/mluk.pl"
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
-alias codd='cd $pcodi'
+alias codd='cd $pcode'
 alias stud='cd $pstud'
 alias home='cd $phome'
 alias dotfiles='cd $pdotfiles'

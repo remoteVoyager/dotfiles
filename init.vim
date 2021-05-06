@@ -132,7 +132,7 @@ nnoremap <C-s> :w<CR>
  
 " useful maps, magic is here
 let mapleader = ','
-vnoremap <leader><leader> <esc> "jfrom exiting the insert mode
+vnoremap <leader>. <esc> "jfrom exiting the insert mode
 inoremap jk <ESC>
 " delete line and back to insert
 inoremap <C-d> <esc>ddi
@@ -163,6 +163,9 @@ nnoremap <leader>wq :wq<cr>
 nnoremap <leader>qq :q<cr>
 " quick write with leader
 nnoremap <leader>ww :w<cr>
+" quick wrtie all with leader
+nnoremap <leader>wa :wa<cr>
+
 
 " easymotion
 nmap s <Plug>(easymotion-s)
@@ -172,6 +175,7 @@ let g:EasyMotion_smartcase = 1
 " tabs
 nnoremap <C-t> :tabe 
 nnoremap <space>t :tabn<CR>
+nnoremap <leader>t :tabn<CR>
 
 " FZF commands
 " search files
