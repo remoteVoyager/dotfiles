@@ -45,14 +45,14 @@ alias cat='pygmentize -g -O style=colorful,lineos=1'
 alias emacs='emacs -nw'
 
 # aliases for git commands
-alias sts='git status'
+alias gs='git status'
 alias gpp='git push'
 alias glg='git log --graph'
 alias glo='git log --oneline'
 alias ginit='git init'
 alias gad='git add .'
-alias commit='git commit'
-alias gdif='git diff'
+# alias commit='git commit'
+# alias gdif='git diff'
 alias gbb='git checkout -b'
 alias gpl='git pull'
 
