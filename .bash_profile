@@ -29,6 +29,7 @@ alias mluk='cd $pmluk'
 
 # aliases for comands
 alias cls='clear'
+alias c='clear'
 
 # aliases for software wsl
 alias clip='clip.exe'
