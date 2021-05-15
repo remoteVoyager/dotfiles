@@ -1,0 +1,27 @@
+#!/usr/bin/bash
+# script installing exa v0.10.0 with all components and zsh completions
+
+# install only with
+if ! command -v exa &> /dev/null then
+
+	if [ -d ~/programs ]; then
+		mkdir ~/programs
+	fi
+
+	# download exa files
+	wget -O ~/programs/exa_bin.zip https://github.com/ogham/exa/releases/download/v0.10.0/exa-linux-x86_64-v0.10.0.zip
+
+	# unpac to directory 
+	unzip ~/programs/exa_bin.zip -d ~/programs/exa_bin
+
+	# copy exec
+	sudo cp ~/programs/exa_bin/bin/exa /usr/local/bin
+
+	# copy man
+	sudo cp ~/programs/exa_bin/man/exa/* /usr/share/man/man1
+
+	# install zsh completions
+	sudo cp ~/programs/exa_bin/completions/exa.zsh /usr/local/share/zsh/site-functions/
+else
+	echo "Exa is already installed -> Aborting"
+fi

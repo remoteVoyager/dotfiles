@@ -1,49 +1,71 @@
 #!/bin/bash
 
 # dotfiles path
-pdot = "/home/mluk/.config/dotfiles"
+pdot="/home/mluk/.config/dotfiles"
 
 # software install ubuntu WSL
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-key C99B11DEB97541F0
 sudo apt-add-repository https://cli.github.com/packages
 
-sudo apt update
+# sudo apt update
 
-sudo apt install neovim ranger gh mc zsh tmux
-
+sudo apt install neovim gh zsh tmux mc ranger rename pip nodejs
+sudo apt instal clasp
 # configuration files 
 # bashrc 
-rm ~/.bashrc ~/.bash_profile
+if [ -f ~/.bashrc ]; then
+	rm ~/.bashrc
+fi
+if [ -f ~/.bash_profile ]; then
+	rm ~/.bash_profile
+fi
 ln -s "$pdot/.bashrc" ~/.bashrc
 ln -s "$pdot/.bash_profile" ~/.bash_profile
 
 # tmux
-if [ -f "~/.tmux.conf" ]; then
+if [ -f ~/.tmux.conf ]; then
 	rm ~/.tmux.conf
 fi
 ln -s "$pdot/.tmux.conf" ~/.tmux.conf
 
 # zsh
-rm ~/.zshrc
+if [ -f ~/.zshrc ]; then
+	rm ~/.zshrc
+fi
 ln -s "$pdot/.zshrc" ~/.zshrc
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
+# install peco zsh
+sudo apt install peco
+git clone https://github.com/jimeh/zsh-peco-history.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-peco-history
+
+
+
 # git
-rm ~/.gitconfig
+if [ -f ~/.gitconfig ]; then
+	rm ~/.gitconfig
+fi
 ln -s "$pdot/.gitconfig" ~/.gitconfig
 
 # dircolors
-rm ~/.dircolors
+if [ -f ~/.dircolors ]; then
+	rm ~/.dircolors
+fi
 ln -s "$pdot/.dircolors" ~/.dircolors
 
 # vim
-if [ ! -d "~/.config/nvim"]; then
+if [ ! -d ~/.config/nvim ]; then
 	mkdir -p ~/.config/nvim
 else
 	rm ~/.config/nvim/init.vim ~/.config/nvim/vimscripts
 fi
 ln -s "$pdot/init.vim" ~/.config/nvim/init.vim
 ln -s "$pdot/vimscripts" ~/.config/nvim/vimscripts
-neovim +PlugInstall
+
+# vim plug
+sh -c 'curl -fLo "${XDG_DATA_HOME:-$HOME/.local/share}"/nvim/site/autoload/plug.vim --create-dirs \
+       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim'
+
+nvim +PlugInstall
 
 source ~/.zshrc
