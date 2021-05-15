@@ -2,7 +2,6 @@
 # file complementary to .bashrc, source it there!
 # github/remoteVoyager
 
-
 # variables for specific places
 phome="/mnt/c/Users/cp/"
 plinhome="/home/mluk"
@@ -13,6 +12,10 @@ pdotfiles="$plinhome/.config/dotfiles"
 pstud="$phome/Dysk Google/!STUDIA"
 pacad="$pstud/pyacademic"
 pmluk="$pcode/Web/mluk.pl"
+
+################################################################################
+# ALIASES
+################################################################################
 
 # aliases for getting into specific places
 alias wonz='cd $pwonz'
@@ -77,16 +80,38 @@ alias sbrc="source ~/.bashrc"
 alias sfi='source ~/.config/fish/config.fish'
 alias szs='source ~/.zshrc'
 
-# add browser global variable to use chrome
-export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
-
-# my variables
-export EDITOR=nvim;
-
 # python utility commands and functions
 alias sbin='source ./venv/bin/activate'
 alias deac='deactivate'
 alias cvenv='python -m venv venv'
+
+################################################################################
+# VARIABLES
+################################################################################
+export EDITOR=nvim;
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+
+# add browser global variable to use chrome
+export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
+
+################################################################################
+# FUNCTIONS
+################################################################################
+
+function mcd () {
+# create directorty and cd into it
+	if ! [ -d $1 ]; then
+		mkdir "./$1"
+		cd "./$1"
+	else
+		echo "$1 exists"
+	fi
+}
+
+################################################################################
+# CONDITIONAL ALIASES
+################################################################################
 
 # exa aliases if exa present
 if command -v exa &> /dev/null
@@ -104,6 +129,9 @@ then
 	alias lt='exa --tree --level=2'                                         # tree
 fi
 
+################################################################################
+# TMUX TAKEOVER
+################################################################################
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! ["$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
 	  exec tmux
 fi
