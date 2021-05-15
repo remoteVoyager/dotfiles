@@ -18,7 +18,9 @@ ln -s "$pdot/.bashrc" ~/.bashrc
 ln -s "$pdot/.bash_profile" ~/.bash_profile
 
 # tmux
-rm ~/.tmux.conf
+if [ -f "~/.tmux.conf" ]; then
+	rm ~/.tmux.conf
+fi
 ln -s "$pdot/.tmux.conf" ~/.tmux.conf
 
 # zsh
