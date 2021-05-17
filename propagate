@@ -9,8 +9,8 @@ sudo apt-add-repository https://cli.github.com/packages
 
 # sudo apt update
 
-sudo apt install neovim gh zsh tmux mc ranger rename pip nodejs
-sudo apt instal clasp
+sudo apt install -y neovim gh zsh tmux mc ranger rename pip nodejs
+sudo apt install -y clasp
 # configuration files 
 # bashrc 
 if [ -f ~/.bashrc ]; then

@@ -134,6 +134,7 @@ nnoremap <C-s> :w<CR>
 let mapleader = ','
 vnoremap <leader>. <esc> "jfrom exiting the insert mode
 inoremap jk <ESC>
+vnoremap <leader><leader> <ESC>
 " delete line and back to insert
 inoremap <C-d> <esc>ddi
 " uppercase current word
