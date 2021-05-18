@@ -47,6 +47,7 @@ alias ww='wslview' # open via default windows app
 alias gist='gh gist'
 alias cat='pygmentize -g -O style=colorful,lineos=1'
 alias emacs='emacs -nw'
+alias calc='orpie'
 
 # aliases for git commands
 alias gs='git status'
