@@ -174,9 +174,11 @@ let g:EasyMotion_smartcase = 1
 " easymotion JK
  
 " tabs
-nnoremap <C-t> :tabe 
-nnoremap <space>t :tabn<CR>
-nnoremap <leader>t :tabn<CR>
+nnoremap <C-t>o :tabe 
+nnoremap <C-t><up> :tabr<cr>
+nnoremap <C-t><down> :tabl<cr>
+nnoremap <C-t><left> :tabp<cr>
+nnoremap <C-t><right> :tabn<cr>
 
 " FZF commands
 " search files

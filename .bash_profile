@@ -92,6 +92,7 @@ alias cvenv='python -m venv venv'
 export EDITOR=nvim;
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
+export PYTHONPATH="$pacad"
 
 # add browser global variable to use chrome
 export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.exe'
@@ -100,14 +101,19 @@ export BROWSER='/mnt/c/Program\ Files\ \(x86\)/Google/Chrome/Application/chrome.
 # FUNCTIONS
 ################################################################################
 
-function mcd () {
 # create directorty and cd into it
+function mcd () {
 	if ! [ -d $1 ]; then
 		mkdir "./$1"
 		cd "./$1"
 	else
 		echo "$1 exists"
 	fi
+}
+
+# copy WUT LaTeX template to current dir
+function newtex () {
+	cp -r "$pacad/misc/tex" ./
 }
 
 ################################################################################
@@ -128,6 +134,12 @@ then
 	# specialty views
 	alias lS='exa -1'                                                              # one column, just names
 	alias lt='exa --tree --level=2'                                         # tree
+fi
+
+# vs code insiders alias
+if command -v code-insiders &> /dev/null
+then
+	alias code='code-insiders'
 fi
 
 ################################################################################
