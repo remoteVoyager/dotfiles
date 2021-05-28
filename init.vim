@@ -15,6 +15,8 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'prabirshrestha/vim-lsp'
 Plug 'jackguo380/vim-lsp-cxx-highlight'
 Plug 'neoclide/coc-css'
+Plug 'lervag/vimtex'
+Plug 'jceb/vim-orgmode'
 
 " linters/formatters
 Plug 'prettier/vim-prettier', { 'do': 'yarn install' }
@@ -29,6 +31,8 @@ Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
 Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-fugitive'
+Plug 'mattn/calendar-vim'
+Plug 'tpope/vim-repeat'
 
 " themes
 Plug 'morhetz/gruvbox'
@@ -167,6 +171,8 @@ nnoremap <leader>ww :w<cr>
 " quick wrtie all with leader
 nnoremap <leader>wa :wa<cr>
 
+" ORG
+let g:org_agenda_files = ['~/org/*.org']
 
 " easymotion
 nmap s <Plug>(easymotion-s)

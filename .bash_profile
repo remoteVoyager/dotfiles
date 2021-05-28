@@ -33,6 +33,7 @@ alias mluk='cd $pmluk'
 # aliases for comands
 alias cls='clear'
 alias c='clear'
+alias rstud='ran $pstud'
 
 # aliases for software wsl
 alias clip='clip.exe'
