@@ -174,6 +174,9 @@ nnoremap <leader>wa :wa<cr>
 " ORG
 let g:org_agenda_files = ['~/org/*.org']
 
+" gx
+let g:netrw_browsex_viewer="cmd.exe /C start"
+
 " easymotion
 nmap s <Plug>(easymotion-s)
 let g:EasyMotion_smartcase = 1

@@ -9,9 +9,12 @@ pdox="$phome/Documents"
 pcode="$pdox/Coding"
 pwonz="$pcode/Python"
 pdotfiles="$plinhome/.config/dotfiles"
-pstud="$phome/Dysk Google/!STUDIA"
+pgdrive="$phome/Dysk Google/"
+pstud="$pgdrive/!STUDIA"
+pcbook="$pgdrive/CODING - knowledge"
 pacad="$pstud/pyacademic"
 pmluk="$pcode/Web/mluk.pl"
+plcode="$plinhome/code"
 
 ################################################################################
 # ALIASES
@@ -29,6 +32,8 @@ alias proto='cd $phome/Proton_Dysk'
 alias wtools='cd $phome/!Tools'
 alias acad='cd $pacad'
 alias mluk='cd $pmluk'
+alias lcode='cd $plcode'
+alias book='cd $pcbook'
 
 # aliases for comands
 alias cls='clear'

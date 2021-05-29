@@ -6,4 +6,4 @@
 [core]
 	editor = nvim
 [init]
-	defaultBranch = main
+	defaultbranch = main
