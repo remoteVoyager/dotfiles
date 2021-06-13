@@ -1,0 +1,38 @@
+#!/bin/bash
+
+# dotfiles path
+pdot="~/.config/dotfiles"
+
+# configuration files 
+# bashrc 
+if [ -f ~/.bashrc ]; then
+	rm ~/.bashrc
+fi
+if [ -f ~/.bash_profile ]; then
+	rm ~/.bash_profile
+fi
+ln -s "$pdot/.bashrc" ~/.bashrc
+ln -s "$pdot/.bash_profile" ~/.bash_profile
+
+# git
+if [ -f ~/.gitconfig ]; then
+	rm ~/.gitconfig
+fi
+ln -s "$pdot/.gitconfig" ~/.gitconfig
+
+# dircolors
+if [ -f ~/.dircolors ]; then
+	rm ~/.dircolors
+fi
+ln -s "$pdot/.dircolors" ~/.dircolors
+
+# vim
+if [ ! -d ~/.config/nvim ]; then
+	mkdir -p ~/.config/nvim
+else
+	rm ~/.config/nvim/init.vim ~/.config/nvim/vimscripts
+fi
+ln -s "$pdot/init.vim" ~/.config/nvim/init.vim
+ln -s "$pdot/vimscripts" ~/.config/nvim/vimscripts
+
+source ~/.bashrc
